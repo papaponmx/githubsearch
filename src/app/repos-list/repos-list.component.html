@@ -1,3 +1,8 @@
-<p>
-  repos-list works!
-</p>
+<section *ngFor="let repo of list">
+    <div class="card-container">
+      <h3>{{ repo.name }}</h3>
+      <a href="{{ repo.html_url }}">Project Url</a>
+      <span className="chip">{{ repo.language }}</span>
+      <span className="starsIndicator">{{ repo.stargazers_count }}</span>
+    </div>
+</section>

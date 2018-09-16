@@ -23,9 +23,7 @@
   </ng-template>
 
   <ng-template [ngIf]='reposData'>
-    Hay una lista:
-
-    {{ reposData }}
+    <app-repos-list [list]='reposData'></app-repos-list>
   </ng-template>
 
 </div>

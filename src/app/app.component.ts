@@ -1,6 +1,6 @@
+import { ReposListComponent } from './repos-list/repos-list.component';
 import { Component, OnInit } from '@angular/core';
 import { ReposService } from './repos.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
