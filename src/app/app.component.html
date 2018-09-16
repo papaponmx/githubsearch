@@ -1,29 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<div class="search-bar">
   <h1>
     {{ title }}
   </h1>
 
   <form (ngSubmit)="onSubmit()" #reposForm="ngForm">
-    <label for="reposQuery">Repo name</label>
-    <input
-      [(ngModel)]="queryTerm"
-      id="reposQuery"
-      placeholder="Angular"
-      type="text"
-      name="reposQuery"
-      />
-    <button type="submit">Search</button>
+    <label for="reposQuery">Search something interesting like Guess.js, or Puppeteer</label>
+    <input [(ngModel)]="queryTerm" id="reposQuery" placeholder="Angular" type="text" name="reposQuery" />
+    <ng-template [ngIf]='queryTerm.length > 0'>
+      <button type="submit">Search</button>
+    </ng-template>
   </form>
-
-
-  <ng-template [ngIf]='!reposData'>
-    <h2>Search something interesting like Guess.js, or Puppeteer</h2>
-    <img [src]='imgUrl' [alt]='altText' />
-  </ng-template>
-
-  <ng-template [ngIf]='reposData'>
-    <app-repos-list [list]='reposData'></app-repos-list>
-  </ng-template>
-
 </div>
+
+<ng-template [ngIf]='reposData'>
+  <app-repos-list [list]='reposData'></app-repos-list>
+</ng-template>

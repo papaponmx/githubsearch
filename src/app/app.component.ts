@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   imgUrl = '/src/assets/sharp-cloud-24px.svg';
   queryTerm = '';
   reposData: Array<any>;
-  title = 'Repo Search App';
+  title = 'Github Repos';
 
   constructor(
     private reposService: ReposService,
