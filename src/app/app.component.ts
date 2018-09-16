@@ -7,10 +7,12 @@ import { ReposService } from './repos.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  altText = 'Waddup';
+  error: boolean;
+  imgUrl = '/src/assets/sharp-cloud-24px.svg';
+  queryTerm = '';
   reposData: Array<any>;
   title = 'Repo Search App';
-  imgUrl = '/src/assets/sharp-cloud-24px.svg'
-  altText = 'Waddup'
 
   constructor(
     private reposService: ReposService,
@@ -19,9 +21,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSearchRepos() {
-    this.reposService.getRepos('angular')
-      .subscribe(res => console.log(res));
+  onSubmit() {
+    this.reposService.getRepos(this.queryTerm)
+      .subscribe(
+        res => this.reposData = res.items,
+        err => this.error = true,
+      );
   }
 
 }

@@ -4,10 +4,16 @@
     {{ title }}
   </h1>
 
-  <form>
+  <form (ngSubmit)="onSubmit()" #reposForm="ngForm">
     <label for="reposQuery">Repo name</label>
-    <input id="reposQuery" placeholder="Angular" type="text" />
-    <button>Search</button>
+    <input
+      [(ngModel)]="queryTerm"
+      id="reposQuery"
+      placeholder="Angular"
+      type="text"
+      name="reposQuery"
+      />
+    <button type="submit">Search</button>
   </form>
 
 
@@ -17,7 +23,9 @@
   </ng-template>
 
   <ng-template [ngIf]='reposData'>
-    Hay una lista
+    Hay una lista:
+
+    {{ reposData }}
   </ng-template>
 
 </div>
