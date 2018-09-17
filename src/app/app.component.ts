@@ -7,9 +7,7 @@ import { ReposService } from './repos.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  altText = 'Waddup';
   error: boolean;
-  imgUrl = '/src/assets/sharp-cloud-24px.svg';
   queryTerm = '';
   reposData: Array<any>;
   title = 'Github Repos';

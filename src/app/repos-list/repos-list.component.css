@@ -1,0 +1,64 @@
+section {
+  width: 80vw;
+  background-color: #444444;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card-container {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  width: 300px;
+  margin: .5vw;
+  max-width: 70vw;
+  padding: 10px;
+
+  flex: auto;
+
+  display: grid;
+  grid-template-rows: 32px 15px 15px;
+  grid-gap: 5px;
+}
+
+.chip {
+  background-color: #333333;
+  color: white;
+  border-radius: 12px;
+  padding: 0 10px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.5;
+  max-width: 50px;
+  text-align: center;
+ }
+
+ .repo-name {
+   font-weight: 300;
+   font-size: 24px;
+ }
+
+ .repo-link {
+  font-size: 14px;
+ }
+
+ .repo-owner {
+  font-weight: 600;
+ }
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  /* display: block; */
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: var(--secondary-color) underline;
+  transition: all 0.2s ease;
+}

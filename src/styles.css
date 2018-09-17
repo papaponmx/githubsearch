@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-  --primary-color: #39CCCC;
-  --secondary-color: #ff9a9e;
+  --primary-color: rgb(30, 77, 77);
+  --secondary-color: #522526;
   --dark-color: #222222;
 
   background-color: var(--dark-color);
@@ -9,3 +9,4 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+

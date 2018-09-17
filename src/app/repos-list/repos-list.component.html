@@ -1,8 +1,8 @@
-<section *ngFor="let repo of list">
-    <div class="card-container">
-      <h3>{{ repo.name }}</h3>
-      <a href="{{ repo.html_url }}">Project Url</a>
-      <span className="chip">{{ repo.language }}</span>
-      <span className="starsIndicator">{{ repo.stargazers_count }}</span>
+<section>
+    <div class="card-container" *ngFor="let repo of list">
+      <a href="{{ repo.html_url }}" class="repo-name">{{ repo.name }}</a>
+      <span class="repo-owner">By <a href="{{ repo.owner.html_url}}"> {{ repo.owner.login }}</a> </span>
+      <span class="chip">{{ repo.language }}</span>
+      <span class="repo-stars">{{ repo.stargazers_count }} stars</span>
     </div>
 </section>
